@@ -1,0 +1,52 @@
+/**
+ * file: style.css
+ * purpose: styles, animation etc
+ * further development: meyer reset perhaps?
+ **/
+
+/* her kan du tilføje en fed baggrund */
+body {
+  background-color: #000;
+}
+
+/* firkant */
+h1, p {color: #fff;}
+#square {
+  background-color: yellow;
+  width: 125px;
+  height: 125px;
+}
+
+#sq2 {
+  background-color: orange;
+  width: 90px;
+  height: 90px;
+}
+
+
+/* en from to animation */
+@keyframes example {
+  from {left: 0px;}
+  to {left: 200px}
+}
+
+/* ekstra animation */
+/* en from to animation */
+@keyframes sq2flyt {
+  from {left: 0px;}
+  to {left: 200px}
+}
+
+/* denne class kaldes og fjernes af javascriptet */
+.animate {
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+.sq2anim {
+  position: relative;
+  animation-name: sq2flyt;
+  animation-duration: 14s;
+}
+
