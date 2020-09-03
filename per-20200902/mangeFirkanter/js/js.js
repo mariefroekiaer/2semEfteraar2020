@@ -17,11 +17,9 @@ let Many = function (howMany) {
         newDiv.style.left = Math.floor(Math.random() * w) + 'px';
         newDiv.style.top = Math.floor(Math.random() * h) + 'px';
         newDiv.style.transform = 'rotate(' +
-            Math.floor(Math.random() * 360) +
-            'deg)';
+            Math.floor(Math.random() * 360) + 'deg)';
 
         scene.appendChild(newDiv);
-        console.log('Many exec...'); // test
     }
 }
 
