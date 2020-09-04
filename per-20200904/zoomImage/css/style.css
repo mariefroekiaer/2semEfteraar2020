@@ -1,0 +1,45 @@
+/**
+ * file: style.css
+ * purpose: styles, animation etc
+ * further development: meyer reset perhaps?
+ **/
+body {
+    /* via eye dropper plugin */
+    background-color: #ccf0fe;
+}
+
+@keyframes moveBg {
+    from {
+        /* definerer startpunktet på det store billede */
+        background-position: 0px 0px;
+    }
+
+    to {
+        /* definerer slutpunktet på det store billede */
+        background-position: -400px 0px;
+    }
+}
+
+/* kalder animationen, og tilføjes via klik */
+.moveIt {
+    animation-name: moveBg;
+    animation-duration: 14s;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+/* 
+ den "scene" eller "åbning" vi kigger igennem
+ den skal være mindre end baggrundsbilledet
+*/
+#zoom {
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    height: 250px;
+    border: 1px solid #000;
+    background-image: url(../images/damparken-haderslev.jpg);
+    background-position: 0px 0px;
+}
