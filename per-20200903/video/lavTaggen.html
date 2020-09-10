@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html> 
+<body>
+
+    <div style="text-align:center">
+        <!--button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button -->
+
+        <button id="visVid"> Vis videoen igå </button>
+        <br><br>
+        
+        <video id="video2" width="420">
+            <!-- sæt video ind her ... -->
+        </video>
+
+    </div>
+
+    <script>
+        
+        /**
+         * Q: hvordan kan man indsætte en video via Js?
+         * A: ----
+         */
+
+        // denne funktion laver en video
+        let Abracadabra = function() {
+            let srcTag = document.createElement("source");
+            let video2src = "media/parade-edinburgh-2015.MP4";
+            srcTag.src = video2src;
+            video2.appendChild(srcTag);
+        }
+        
+        // videoen vises ved klik på visVid
+        visVid.addEventListener('click', Abracadabra);
+        
+        /*
+        let Xbracadabra = function( videoNavn ) {
+            let srcTag = document.createElement("source");
+            let video2src = "media/" + videoNavn;
+            
+            srcTag.src = video2src;
+            video2.appendChild(srcTag);
+        }
+        
+        Xbracadabra("parade-edinburgh-2015.MP4");
+        */
+        
+
+        function playPause() {
+            if (myVideo.paused)
+                myVideo.play();
+            else
+                myVideo.pause();
+        }
+
+        function makeBig() {
+            myVideo.width = 560;
+        }
+
+        function makeSmall() {
+            myVideo.width = 320;
+        }
+
+        function makeNormal() {
+            myVideo.width = 420;
+        }
+    </script>
+
+    <p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+
+</body></html>
